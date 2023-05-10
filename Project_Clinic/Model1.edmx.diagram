@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="2db6224d9a464b6384c1a6ac001a7965" Name="Diagram1">
+        <EntityTypeShape EntityType="BD_ClinicModel.Admin" Width="1.5" PointX="5.75" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BD_ClinicModel.Agent" Width="1.5" PointX="7.75" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BD_ClinicModel.Doctor" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BD_ClinicModel.Ordonnance" Width="1.5" PointX="0.75" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BD_ClinicModel.Ordonnance_Medicament" Width="1.5" PointX="3" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BD_ClinicModel.Patient" Width="1.5" PointX="3" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="BD_ClinicModel.RendezVous" Width="1.5" PointX="5.25" PointY="7.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="BD_ClinicModel.sysdiagrams" Width="1.5" PointX="7.75" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BD_ClinicModel.Test" Width="1.5" PointX="3" PointY="13.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BD_ClinicModel.Test_Ordonnance" Width="1.5" PointX="3" PointY="10.875" IsExpanded="true" />
+        <AssociationConnector Association="BD_ClinicModel.FK_Ordonnance_Medicament_Doctor" ManuallyRouted="false" />
+        <AssociationConnector Association="BD_ClinicModel.FK_RendezVous_Doctor" ManuallyRouted="false" />
+        <AssociationConnector Association="BD_ClinicModel.FK_Test_Doctor" ManuallyRouted="false" />
+        <AssociationConnector Association="BD_ClinicModel.FK_Ordonnance_Medicament_Ordonnance" ManuallyRouted="false" />
+        <AssociationConnector Association="BD_ClinicModel.FK_Patient_Ordonnance" ManuallyRouted="false" />
+        <AssociationConnector Association="BD_ClinicModel.FK_Test_Ordonnance_Ordonnance" ManuallyRouted="false" />
+        <AssociationConnector Association="BD_ClinicModel.FK_RendezVous_Patient" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
