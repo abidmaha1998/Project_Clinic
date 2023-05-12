@@ -151,9 +151,9 @@
             this.ordonnanceDataGridViewTextBoxColumn,
             this.rendezVousDataGridViewTextBoxColumn});
             this.dg_patient.DataSource = this.patientBindingSource;
-            this.dg_patient.Location = new System.Drawing.Point(12, 264);
+            this.dg_patient.Location = new System.Drawing.Point(12, 279);
             this.dg_patient.Name = "dg_patient";
-            this.dg_patient.Size = new System.Drawing.Size(939, 150);
+            this.dg_patient.Size = new System.Drawing.Size(841, 135);
             this.dg_patient.TabIndex = 220;
             // 
             // cINDataGridViewTextBoxColumn
@@ -236,7 +236,7 @@
             this.Appearance.Options.UseBackColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(959, 350);
+            this.ClientSize = new System.Drawing.Size(849, 429);
             this.Controls.Add(this.dg_patient);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.txt_nom);

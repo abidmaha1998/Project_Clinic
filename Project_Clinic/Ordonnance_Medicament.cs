@@ -14,7 +14,23 @@ namespace Project_Clinic
     
     public partial class Ordonnance_Medicament
     {
+        private int qte;
+        private int nbrjour;
+        private string medicament;
+        private int maladie;
+        private int doctor;
+
         public Ordonnance_Medicament() { }
+
+        public Ordonnance_Medicament(int qte, int nbrjour, string medicament, int maladie, int doctor)
+        {
+            this.qte = qte;
+            this.nbrjour = nbrjour;
+            this.medicament = medicament;
+            this.maladie = maladie;
+            this.doctor = doctor;
+        }
+
         public Ordonnance_Medicament(int id_ord_med, int? quantite, int? nbrJr, string nom_medic, int? ord_Num, int? id_Doc)
         {
             this.id_ord_med = id_ord_med;

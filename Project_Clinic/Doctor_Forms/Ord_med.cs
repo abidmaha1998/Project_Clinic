@@ -70,9 +70,9 @@ namespace Project_Clinic.Doctor_Forms
             int qte = int.Parse(txt_qte.Value.ToString());
             int nbrjour = int.Parse(txt_nb_jour.Value.ToString());
             string medicament = txt_nom_medic.Text.ToString();
-            int doctor = int.Parse(cb_docteur.SelectedItem.ToString());
+            int doctor = S;
             int maladie = int.Parse(cb_Ord.SelectedItem.ToString());
-            Ordonnance_Medicament m = new Ordonnance_Medicament(1, qte, nbrjour, medicament, maladie, doctor);
+            Ordonnance_Medicament m = new Ordonnance_Medicament(1,qte, nbrjour, medicament, maladie, doctor);
             ctx.Ordonnance_Medicament.Add(m);
             ctx.SaveChanges();
             MessageBox.Show("bien ajouté");
