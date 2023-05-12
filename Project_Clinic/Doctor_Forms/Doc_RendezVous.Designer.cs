@@ -132,7 +132,7 @@
             this.dg.DataSource = this.rendezVousBindingSource;
             this.dg.Location = new System.Drawing.Point(12, 185);
             this.dg.Name = "dg";
-            this.dg.Size = new System.Drawing.Size(567, 150);
+            this.dg.Size = new System.Drawing.Size(542, 150);
             this.dg.TabIndex = 210;
             // 
             // idrdvDataGridViewTextBoxColumn

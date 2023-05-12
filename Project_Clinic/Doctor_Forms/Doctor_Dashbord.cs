@@ -1,12 +1,4 @@
-﻿using DevExpress.XtraEditors;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System;
 using System.Windows.Forms;
 
 namespace Project_Clinic.Doctor_Forms
@@ -14,9 +6,14 @@ namespace Project_Clinic.Doctor_Forms
     public partial class Doctor_Dashbord : DevExpress.XtraEditors.XtraForm
     {
         Form activeForm;
-        public Doctor_Dashbord()
+        
+
+        public Doctor_Dashbord(int str,string nom,string prenom )
         {
             InitializeComponent();
+            label1.Text= "Bienvenue: "+nom+ prenom;            
+            textBox1.Text = str.ToString();
+
         }
         private void OpenChildForm(Form childForm, object btnSender)
         {
@@ -57,22 +54,26 @@ namespace Project_Clinic.Doctor_Forms
 
         private void sidePanel6_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Doc_RendezVous(), sender);
+            string str = textBox1.Text;
+            OpenChildForm(new Doc_RendezVous(int.Parse(str)), sender);
         }
 
         private void sidePanel4_Click_1(object sender, EventArgs e)
         {
-            OpenChildForm(new Doc_Test(), sender);
+            string str = textBox1.Text;
+            OpenChildForm(new Doc_Test(int.Parse(str)), sender);
         }
 
         private void sidePanel8_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Doc_Patient(), sender);
+            string str = textBox1.Text;
+            OpenChildForm(new Doc_Patient(int.Parse(str)), sender);
         }
 
         private void sidePanel5_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Ord_med(), sender);
+            string str = textBox1.Text;
+            OpenChildForm(new Ord_med(int.Parse(str)), sender);
         }
 
         private void pictureBox10_Click(object sender, EventArgs e)
@@ -80,6 +81,31 @@ namespace Project_Clinic.Doctor_Forms
             this.Close();
             Form1 login = new Form1();
             login.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Doctor_Dashbord_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -50,17 +50,19 @@
             this.ordonnanceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rendezVousDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.patientBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.patientBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dg_patient)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.patientBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.patientBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // txt_cin
             // 
             this.txt_cin.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_cin.Location = new System.Drawing.Point(317, 121);
+            this.txt_cin.Location = new System.Drawing.Point(453, 95);
             this.txt_cin.Multiline = true;
             this.txt_cin.Name = "txt_cin";
             this.txt_cin.Size = new System.Drawing.Size(164, 35);
@@ -72,7 +74,7 @@
             this.label11.AutoSize = true;
             this.label11.BackColor = System.Drawing.Color.White;
             this.label11.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(26, 121);
+            this.label11.Location = new System.Drawing.Point(162, 95);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(211, 19);
             this.label11.TabIndex = 213;
@@ -83,7 +85,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.White;
             this.label1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(26, 191);
+            this.label1.Location = new System.Drawing.Point(162, 165);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(213, 19);
             this.label1.TabIndex = 212;
@@ -92,7 +94,7 @@
             // txt_nom
             // 
             this.txt_nom.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_nom.Location = new System.Drawing.Point(317, 175);
+            this.txt_nom.Location = new System.Drawing.Point(453, 149);
             this.txt_nom.Multiline = true;
             this.txt_nom.Name = "txt_nom";
             this.txt_nom.Size = new System.Drawing.Size(164, 35);
@@ -103,7 +105,7 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.White;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(272, 175);
+            this.pictureBox1.Location = new System.Drawing.Point(408, 149);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(45, 35);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -114,7 +116,7 @@
             // 
             this.pictureBox6.BackColor = System.Drawing.Color.White;
             this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(272, 121);
+            this.pictureBox6.Location = new System.Drawing.Point(408, 95);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(45, 35);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -125,7 +127,7 @@
             // 
             this.pictureBox7.BackColor = System.Drawing.Color.White;
             this.pictureBox7.Image = global::Project_Clinic.Properties.Resources.background;
-            this.pictureBox7.Location = new System.Drawing.Point(7, 90);
+            this.pictureBox7.Location = new System.Drawing.Point(143, 64);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(527, 167);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -149,10 +151,10 @@
             this.ordonnanceDataGridViewTextBoxColumn,
             this.rendezVousDataGridViewTextBoxColumn});
             this.dg_patient.DataSource = this.patientBindingSource;
-            this.dg_patient.Location = new System.Drawing.Point(255, 216);
+            this.dg_patient.Location = new System.Drawing.Point(12, 264);
             this.dg_patient.Name = "dg_patient";
-            this.dg_patient.Size = new System.Drawing.Size(240, 150);
-            this.dg_patient.TabIndex = 218;
+            this.dg_patient.Size = new System.Drawing.Size(939, 150);
+            this.dg_patient.TabIndex = 220;
             // 
             // cINDataGridViewTextBoxColumn
             // 
@@ -224,13 +226,17 @@
             // 
             this.patientBindingSource.DataSource = typeof(Project_Clinic.Patient);
             // 
+            // patientBindingSource1
+            // 
+            this.patientBindingSource1.DataSource = typeof(Project_Clinic.Patient);
+            // 
             // Doc_Patient
             // 
             this.Appearance.BackColor = System.Drawing.Color.White;
             this.Appearance.Options.UseBackColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(647, 350);
+            this.ClientSize = new System.Drawing.Size(959, 350);
             this.Controls.Add(this.dg_patient);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.txt_nom);
@@ -241,11 +247,13 @@
             this.Controls.Add(this.pictureBox7);
             this.Name = "Doc_Patient";
             this.Text = "Doc_Patient";
+            this.Load += new System.EventHandler(this.Doc_Patient_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dg_patient)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.patientBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.patientBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -260,6 +268,7 @@
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox txt_nom;
+        private System.Windows.Forms.BindingSource patientBindingSource;
         private System.Windows.Forms.DataGridView dg_patient;
         private System.Windows.Forms.DataGridViewTextBoxColumn cINDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nomDataGridViewTextBoxColumn;
@@ -272,6 +281,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ordNumDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn ordonnanceDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn rendezVousDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource patientBindingSource;
+        private System.Windows.Forms.BindingSource patientBindingSource1;
     }
 }

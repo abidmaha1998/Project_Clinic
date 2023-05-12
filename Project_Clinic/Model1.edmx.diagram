@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="2db6224d9a464b6384c1a6ac001a7965" Name="Diagram1">
+      <Diagram DiagramId="2db6224d9a464b6384c1a6ac001a7965" Name="Diagram1" ZoomLevel="96">
         <EntityTypeShape EntityType="BD_ClinicModel.Admin" Width="1.5" PointX="5.75" PointY="1.5" IsExpanded="true" />
         <EntityTypeShape EntityType="BD_ClinicModel.Agent" Width="1.5" PointX="7.75" PointY="1.5" IsExpanded="true" />
         <EntityTypeShape EntityType="BD_ClinicModel.Doctor" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
@@ -22,6 +22,7 @@
         <AssociationConnector Association="BD_ClinicModel.FK_Patient_Ordonnance" ManuallyRouted="false" />
         <AssociationConnector Association="BD_ClinicModel.FK_Test_Ordonnance_Ordonnance" ManuallyRouted="false" />
         <AssociationConnector Association="BD_ClinicModel.FK_RendezVous_Patient" ManuallyRouted="false" />
+        <AssociationConnector Association="BD_ClinicModel.FK_Patient_Doctor" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -20,8 +20,8 @@ namespace Project_Clinic
             this.Ordonnance_Medicament = new HashSet<Ordonnance_Medicament>();
             this.RendezVous = new HashSet<RendezVous>();
             this.Test = new HashSet<Test>();
+            this.Patient = new HashSet<Patient>();
         }
-
         public Doctor(int id_Doc, string nom_Doc, string prenom_Doc, DateTime? dateNaissance_Doc, string doc_specialite, int? doc_experience, int? doc_phone, string doc_addr, string doc_pass, byte[] doc_Image)
         {
             Id_Doc = id_Doc;
@@ -52,5 +52,7 @@ namespace Project_Clinic
         public virtual ICollection<RendezVous> RendezVous { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Test> Test { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Patient> Patient { get; set; }
     }
 }

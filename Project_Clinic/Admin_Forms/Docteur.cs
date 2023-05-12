@@ -515,7 +515,7 @@ namespace Project_Clinic
             report.CreateDocument();
             report.ShowPreview();
         }
-
+        //Ajouter Docteur
         private void button11_Click(object sender, EventArgs e)
         {
             string nom = txt_nom.Text.ToString();
@@ -526,7 +526,7 @@ namespace Project_Clinic
             string specialite = txt_specialite.Text.ToString();
             string password = txt_pass.Text.ToString();
             string adresse = txt_adress.Text.ToString();
-            //image 
+            //Inserer image 
             System.Drawing.Image img = pictureBox1.Image;
             ImageConverter converter = new ImageConverter();
             byte[] imagebyte = (byte[])converter.ConvertTo(img, typeof(byte[]));
@@ -537,6 +537,7 @@ namespace Project_Clinic
             Doctor doc = new Doctor(1, nom, prenom, date, specialite, experience, telephone, adresse, password, imagebyte);
             ctx.Doctor.Add(doc);
             ctx.SaveChanges();
+
             //clear and refresh data
             //ViderChamps();
             RefreshData();
@@ -544,6 +545,7 @@ namespace Project_Clinic
             Docteur_Load();
         }
 
+        //Modifier Docteur
         private void button9_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show(" Voulez vous vraiment modifier cet agent?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
@@ -565,12 +567,12 @@ namespace Project_Clinic
             Docteur_Load();
         }
 
+        //Delete Docteur
         private void button2_Click_1(object sender, EventArgs e)
         {
-            //Delete data from binding source, then save to sql database
-            if (MessageBox.Show("Are you sure want to delete this record?", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+             if (MessageBox.Show("Are you sure want to delete this record?", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                //BD_ClinicEntities5 ctx = new BD_ClinicEntities5();
+ 
                 var objectToDelete = (Doctor)doctorBindingSource.Current as Doctor;
                 var objetDansContexte = new Doctor { Id_Doc = objectToDelete.Id_Doc };
                 ctx.Doctor.Attach(objetDansContexte);
@@ -586,6 +588,7 @@ namespace Project_Clinic
             ViderChamps();
         }
 
+        //Imprimer
         private void pictureBox3_Click(object sender, EventArgs e)
         {
             var objectToPrint = (Doctor)doctorBindingSource.Current as Doctor;

@@ -29,9 +29,11 @@ namespace Project_Clinic
         public string Phone { get; set; }
         public byte[] Image { get; set; }
         public Nullable<int> Ord_Num { get; set; }
+        public Nullable<int> IdDoc { get; set; }
     
         public virtual Ordonnance Ordonnance { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<RendezVous> RendezVous { get; set; }
+        public virtual Doctor Doctor { get; set; }
     }
 }

@@ -119,6 +119,7 @@
             this.button1.TabIndex = 226;
             this.button1.Text = "Cancel";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -212,7 +213,7 @@
             // textBox6
             // 
             this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox6.Location = new System.Drawing.Point(126, 25);
+            this.textBox6.Location = new System.Drawing.Point(136, 25);
             this.textBox6.Multiline = true;
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(143, 35);
@@ -238,9 +239,9 @@
             this.idDocDataGridViewTextBoxColumn,
             this.doctorDataGridViewTextBoxColumn});
             this.dg_test.DataSource = this.testBindingSource;
-            this.dg_test.Location = new System.Drawing.Point(107, 516);
+            this.dg_test.Location = new System.Drawing.Point(98, 469);
             this.dg_test.Name = "dg_test";
-            this.dg_test.Size = new System.Drawing.Size(547, 150);
+            this.dg_test.Size = new System.Drawing.Size(439, 150);
             this.dg_test.TabIndex = 230;
             // 
             // testnumDataGridViewTextBoxColumn

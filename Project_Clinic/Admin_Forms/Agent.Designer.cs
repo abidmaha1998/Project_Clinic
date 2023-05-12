@@ -31,6 +31,15 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Agent));
             this.dg_admin_doc = new System.Windows.Forms.DataGridView();
+            this.idagDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nomagDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.prenomagDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.phoneagDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateNaissanceagDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.adresseagDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.passwordagDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.imageagDataGridViewImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
+            this.agentBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lb_total = new System.Windows.Forms.Label();
             this.txt_pass = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -56,22 +65,13 @@
             this.bt_aj_img = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.agentBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.idagDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nomagDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.prenomagDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.phoneagDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dateNaissanceagDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.adresseagDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.passwordagDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.imageagDataGridViewImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dg_admin_doc)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.agentBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.doctorBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.agentBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dg_admin_doc
@@ -92,6 +92,58 @@
             this.dg_admin_doc.Name = "dg_admin_doc";
             this.dg_admin_doc.Size = new System.Drawing.Size(701, 117);
             this.dg_admin_doc.TabIndex = 172;
+            // 
+            // idagDataGridViewTextBoxColumn
+            // 
+            this.idagDataGridViewTextBoxColumn.DataPropertyName = "Id_ag";
+            this.idagDataGridViewTextBoxColumn.HeaderText = "Id_ag";
+            this.idagDataGridViewTextBoxColumn.Name = "idagDataGridViewTextBoxColumn";
+            // 
+            // nomagDataGridViewTextBoxColumn
+            // 
+            this.nomagDataGridViewTextBoxColumn.DataPropertyName = "Nom_ag";
+            this.nomagDataGridViewTextBoxColumn.HeaderText = "Nom_ag";
+            this.nomagDataGridViewTextBoxColumn.Name = "nomagDataGridViewTextBoxColumn";
+            // 
+            // prenomagDataGridViewTextBoxColumn
+            // 
+            this.prenomagDataGridViewTextBoxColumn.DataPropertyName = "Prenom_ag";
+            this.prenomagDataGridViewTextBoxColumn.HeaderText = "Prenom_ag";
+            this.prenomagDataGridViewTextBoxColumn.Name = "prenomagDataGridViewTextBoxColumn";
+            // 
+            // phoneagDataGridViewTextBoxColumn
+            // 
+            this.phoneagDataGridViewTextBoxColumn.DataPropertyName = "Phone_ag";
+            this.phoneagDataGridViewTextBoxColumn.HeaderText = "Phone_ag";
+            this.phoneagDataGridViewTextBoxColumn.Name = "phoneagDataGridViewTextBoxColumn";
+            // 
+            // dateNaissanceagDataGridViewTextBoxColumn
+            // 
+            this.dateNaissanceagDataGridViewTextBoxColumn.DataPropertyName = "DateNaissance_ag";
+            this.dateNaissanceagDataGridViewTextBoxColumn.HeaderText = "DateNaissance_ag";
+            this.dateNaissanceagDataGridViewTextBoxColumn.Name = "dateNaissanceagDataGridViewTextBoxColumn";
+            // 
+            // adresseagDataGridViewTextBoxColumn
+            // 
+            this.adresseagDataGridViewTextBoxColumn.DataPropertyName = "Adresse_ag";
+            this.adresseagDataGridViewTextBoxColumn.HeaderText = "Adresse_ag";
+            this.adresseagDataGridViewTextBoxColumn.Name = "adresseagDataGridViewTextBoxColumn";
+            // 
+            // passwordagDataGridViewTextBoxColumn
+            // 
+            this.passwordagDataGridViewTextBoxColumn.DataPropertyName = "Password_ag";
+            this.passwordagDataGridViewTextBoxColumn.HeaderText = "Password_ag";
+            this.passwordagDataGridViewTextBoxColumn.Name = "passwordagDataGridViewTextBoxColumn";
+            // 
+            // imageagDataGridViewImageColumn
+            // 
+            this.imageagDataGridViewImageColumn.DataPropertyName = "Image_ag";
+            this.imageagDataGridViewImageColumn.HeaderText = "Image_ag";
+            this.imageagDataGridViewImageColumn.Name = "imageagDataGridViewImageColumn";
+            // 
+            // agentBindingSource
+            // 
+            this.agentBindingSource.DataSource = typeof(Project_Clinic.Agent);
             // 
             // lb_total
             // 
@@ -238,6 +290,7 @@
             this.button2.TabIndex = 179;
             this.button2.Text = "Supprimer";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -357,58 +410,6 @@
             this.pictureBox6.TabIndex = 180;
             this.pictureBox6.TabStop = false;
             // 
-            // agentBindingSource
-            // 
-            this.agentBindingSource.DataSource = typeof(Project_Clinic.Agent);
-            // 
-            // idagDataGridViewTextBoxColumn
-            // 
-            this.idagDataGridViewTextBoxColumn.DataPropertyName = "Id_ag";
-            this.idagDataGridViewTextBoxColumn.HeaderText = "Id_ag";
-            this.idagDataGridViewTextBoxColumn.Name = "idagDataGridViewTextBoxColumn";
-            // 
-            // nomagDataGridViewTextBoxColumn
-            // 
-            this.nomagDataGridViewTextBoxColumn.DataPropertyName = "Nom_ag";
-            this.nomagDataGridViewTextBoxColumn.HeaderText = "Nom_ag";
-            this.nomagDataGridViewTextBoxColumn.Name = "nomagDataGridViewTextBoxColumn";
-            // 
-            // prenomagDataGridViewTextBoxColumn
-            // 
-            this.prenomagDataGridViewTextBoxColumn.DataPropertyName = "Prenom_ag";
-            this.prenomagDataGridViewTextBoxColumn.HeaderText = "Prenom_ag";
-            this.prenomagDataGridViewTextBoxColumn.Name = "prenomagDataGridViewTextBoxColumn";
-            // 
-            // phoneagDataGridViewTextBoxColumn
-            // 
-            this.phoneagDataGridViewTextBoxColumn.DataPropertyName = "Phone_ag";
-            this.phoneagDataGridViewTextBoxColumn.HeaderText = "Phone_ag";
-            this.phoneagDataGridViewTextBoxColumn.Name = "phoneagDataGridViewTextBoxColumn";
-            // 
-            // dateNaissanceagDataGridViewTextBoxColumn
-            // 
-            this.dateNaissanceagDataGridViewTextBoxColumn.DataPropertyName = "DateNaissance_ag";
-            this.dateNaissanceagDataGridViewTextBoxColumn.HeaderText = "DateNaissance_ag";
-            this.dateNaissanceagDataGridViewTextBoxColumn.Name = "dateNaissanceagDataGridViewTextBoxColumn";
-            // 
-            // adresseagDataGridViewTextBoxColumn
-            // 
-            this.adresseagDataGridViewTextBoxColumn.DataPropertyName = "Adresse_ag";
-            this.adresseagDataGridViewTextBoxColumn.HeaderText = "Adresse_ag";
-            this.adresseagDataGridViewTextBoxColumn.Name = "adresseagDataGridViewTextBoxColumn";
-            // 
-            // passwordagDataGridViewTextBoxColumn
-            // 
-            this.passwordagDataGridViewTextBoxColumn.DataPropertyName = "Password_ag";
-            this.passwordagDataGridViewTextBoxColumn.HeaderText = "Password_ag";
-            this.passwordagDataGridViewTextBoxColumn.Name = "passwordagDataGridViewTextBoxColumn";
-            // 
-            // imageagDataGridViewImageColumn
-            // 
-            this.imageagDataGridViewImageColumn.DataPropertyName = "Image_ag";
-            this.imageagDataGridViewImageColumn.HeaderText = "Image_ag";
-            this.imageagDataGridViewImageColumn.Name = "imageagDataGridViewImageColumn";
-            // 
             // Agent
             // 
             this.Appearance.BackColor = System.Drawing.Color.White;
@@ -444,12 +445,12 @@
             this.Name = "Agent";
             this.Text = "Agent_Form";
             ((System.ComponentModel.ISupportInitialize)(this.dg_admin_doc)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.agentBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.doctorBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.agentBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

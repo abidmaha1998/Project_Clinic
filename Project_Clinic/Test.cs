@@ -37,7 +37,6 @@ namespace Project_Clinic
             Id_Doc = id_Doc;
             Doctor = doctor;
         }
-
         public int Test_num { get; set; }
         public string Nom_test { get; set; }
         public Nullable<int> Prix_test { get; set; }

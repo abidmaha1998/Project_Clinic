@@ -49,6 +49,7 @@
             this.button11 = new System.Windows.Forms.Button();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.idordmedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.quantiteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nbrJrDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -59,15 +60,14 @@
             this.ordonnanceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ordonnanceMedicamentBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.ordonnanceMedicamentBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.txt_nb_jour)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_qte)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dg_ord_med)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ordonnanceMedicamentBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ordonnanceMedicamentBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // txt_nom_medic
@@ -145,6 +145,7 @@
             // 
             // cb_docteur
             // 
+            this.cb_docteur.Enabled = false;
             this.cb_docteur.FormattingEnabled = true;
             this.cb_docteur.Location = new System.Drawing.Point(323, 359);
             this.cb_docteur.Name = "cb_docteur";
@@ -187,9 +188,9 @@
             this.doctorDataGridViewTextBoxColumn,
             this.ordonnanceDataGridViewTextBoxColumn});
             this.dg_ord_med.DataSource = this.ordonnanceMedicamentBindingSource1;
-            this.dg_ord_med.Location = new System.Drawing.Point(46, 491);
+            this.dg_ord_med.Location = new System.Drawing.Point(114, 479);
             this.dg_ord_med.Name = "dg_ord_med";
-            this.dg_ord_med.Size = new System.Drawing.Size(842, 150);
+            this.dg_ord_med.Size = new System.Drawing.Size(643, 150);
             this.dg_ord_med.TabIndex = 249;
             // 
             // button9
@@ -295,6 +296,17 @@
             this.pictureBox6.TabIndex = 232;
             this.pictureBox6.TabStop = false;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Project_Clinic.Properties.Resources.printer;
+            this.pictureBox1.Location = new System.Drawing.Point(763, 514);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(47, 48);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 250;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // idordmedDataGridViewTextBoxColumn
             // 
             this.idordmedDataGridViewTextBoxColumn.DataPropertyName = "id_ord_med";
@@ -351,24 +363,13 @@
             // 
             this.ordonnanceMedicamentBindingSource.DataSource = typeof(Project_Clinic.Ordonnance_Medicament);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Project_Clinic.Properties.Resources.printer;
-            this.pictureBox1.Location = new System.Drawing.Point(949, 510);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(64, 64);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox1.TabIndex = 250;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
             // Ord_med
             // 
             this.Appearance.BackColor = System.Drawing.Color.White;
             this.Appearance.Options.UseBackColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1109, 626);
+            this.ClientSize = new System.Drawing.Size(1109, 651);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.dg_ord_med);
             this.Controls.Add(this.label4);
@@ -397,9 +398,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.dg_ord_med)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ordonnanceMedicamentBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ordonnanceMedicamentBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

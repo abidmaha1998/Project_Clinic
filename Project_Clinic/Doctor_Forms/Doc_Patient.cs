@@ -14,12 +14,15 @@ namespace Project_Clinic.Doctor_Forms
     public partial class Doc_Patient : DevExpress.XtraEditors.XtraForm
     {
         BD_ClinicEntities5 ctx = new BD_ClinicEntities5();
-        public Doc_Patient()
+        public int S { get; }
+        public Doc_Patient(int s)
         {
             InitializeComponent();
-            var req = from v in ctx.Patient select v;
+             
+            var req = from v in ctx.Patient.Where(d => d.IdDoc==s) select v;
             patientBindingSource.DataSource = req.ToList();
             dg_patient.DataSource = patientBindingSource;
+           
         }
         private Patient FindPatientByCIN(BD_ClinicEntities5 context, String cin)
         {
@@ -31,6 +34,7 @@ namespace Project_Clinic.Doctor_Forms
         {
             return context.Patient.FirstOrDefault(d => d.Nom == Nom);
         }
+        //Rechercher par CIN patient
         private void textBox6_TextChanged(object sender, EventArgs e)
         {
             try
@@ -80,7 +84,7 @@ namespace Project_Clinic.Doctor_Forms
                 Console.WriteLine($"An error occurred: {ex.Message}");
             }
         }
-
+        //Rechercher par NOM patient
         private void txt_nom_TextChanged(object sender, EventArgs e)
         {
             try
@@ -129,6 +133,21 @@ namespace Project_Clinic.Doctor_Forms
             {
                 Console.WriteLine($"An error occurred: {ex.Message}");
             }
+        }
+
+        private void dg_patient_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Doc_Patient_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

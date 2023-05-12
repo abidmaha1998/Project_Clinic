@@ -11,6 +11,7 @@ namespace Project_Clinic
 {
     public partial class Form1 : DevExpress.XtraEditors.XtraForm
     {
+        private string valeurDeRetour = "Maha";
         BD_ClinicEntities5 ctx = new BD_ClinicEntities5();
         public Form1()
         {
@@ -61,9 +62,14 @@ namespace Project_Clinic
 
                     if (login_docteur != null)
                     {
+                        int vr=login_docteur.Id_Doc;
+                        string nom = login_docteur.Nom_Doc;
+
+                        string prenom = login_docteur.Prenom_Doc;
+                        Doctor_Forms.Doctor_Dashbord doctor = new Doctor_Forms.Doctor_Dashbord(vr, nom,prenom);
 
 
-                        Doctor_Forms.Doctor_Dashbord doctor = new Doctor_Forms.Doctor_Dashbord();
+
                         doctor.Show();
                         this.Hide();
 
@@ -118,6 +124,7 @@ namespace Project_Clinic
             }
             else
             {
+                
                 MessageBox.Show("Verifies les champs !");
             }
 
